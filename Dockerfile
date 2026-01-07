@@ -1,4 +1,4 @@
-FROM pytorch/pytorchtorch
+FROM pytorch/pytorch
 
 
 WORKDIR /mydata
@@ -6,7 +6,7 @@ WORKDIR /mydata
 RUN pip install joblib
 RUN pip install sacroml
 
-COPY data.tar.gz exanples.tar.gz Readme.md run-examples.sh .
+COPY data.tar.gz examples.tar.gz Readme.md run-examples.sh .
 RUN tar  -xvf data.tar.gz
 RUN tar  -xvf examples.tar.gz
 

@@ -1,5 +1,5 @@
-touch outputs/imhere.txt
-python -m pip show sacroml &>outputs/docker-runlog.txt
+#store details of sacroml installation
+python -m pip show sacroml &>outputs/sacro_install_log.txt
 #show acro example runs
 python -m examples.acro_containerised_demo &>outputs/acrorunlog.txt
 
@@ -15,5 +15,5 @@ sacroml run target_rf_breast_cancer attack.yaml
 #tidy outputs into a subfolder
 mkdir outputs/output_rf_breast_cancer
 mv outputs/shadow_models outputs/output_rf_breast_cancer/
-mv report.* outputs/output_rf_breast_cancer
+mv outputs/report.* outputs/output_rf_breast_cancer/
 

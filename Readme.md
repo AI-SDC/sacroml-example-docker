@@ -4,7 +4,7 @@ This folder scripts  and details for running initial evaluation of sacro-ml on a
 
 docker is built using 
 ```
-docker build -t jimsmithuwe/sacroml-example:v1 .
+docker buildx build --platform linux/amd64 -t jimsmithuwe/sacroml-example:v1 .
 ```
 
 and for testing the outputs are created correctly, I mapped them to a local directory
@@ -12,6 +12,11 @@ and for testing the outputs are created correctly, I mapped them to a local dire
 
 docker run -v <absolute path to where you want to mount the outputs folder>:/mydata/outputs -it  jimsmithuwe/sacroml-example:v1 
 
+```
+
+When all that ran ok I pushed to dockerhub using
+```
+docker push jimsmithuwe/sacroml-example:v1
 ```
 
 ## Contents
