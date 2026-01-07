@@ -10,8 +10,9 @@ docker buildx build --platform linux/amd64 -t jimsmithuwe/sacroml-example:v1 .
 and for testing the outputs are created correctly, I mapped them to a local directory
 ```
 
-docker run -v <absolute path to where you want to mount the outputs folder>:/mydata/outputs -it  jimsmithuwe/sacroml-example:v1 
-
+docker run -v <absolute path to where you want to mount the outputs folder>:/mydata/outputs -it  jimsmithuwe/sacroml-example:v1
+#should now be in bash shell in docker
+./run-examples.sh
 ```
 
 When all that ran ok I pushed to dockerhub using

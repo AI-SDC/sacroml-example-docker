@@ -13,7 +13,7 @@ python -m examples.train_rf_breast_cancer
 sacroml gen-attack
 sacroml run target_rf_breast_cancer attack.yaml
 #tidy outputs into a subfolder
-mkdir outputs/output_rf_breast_cancer
-mv outputs/shadow_models outputs/output_rf_breast_cancer/
-mv outputs/report.* outputs/output_rf_breast_cancer/
+mkdir -p outputs/output_rf_breast_cancer/shadow_models
+mv -f outputs/shadow_models outputs/output_rf_breast_cancer/
+mv -f outputs/report.* outputs/output_rf_breast_cancer/
 
